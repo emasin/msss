@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: "MSSS BE",
-    script: "./dist/src/main.js",
+    script: "./dist/main.js",
     max_memory_restart: "3G",
     kill_timeout: 5000,
     env: {
