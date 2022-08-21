@@ -16,9 +16,9 @@ export class KftcController {
   constructor(private readonly service: KftcService) {}
 
   @Get('/callback')
-  async callback(@Param() params, @Query() query): Promise<string> {
+  async callback(@Body() body,@Param() params, @Query() query): Promise<string> {
     const k = query;
-    this.logger.log('params', params);
+    this.logger.log('body', body);
     this.logger.log('query', query);
     return query;
   }
