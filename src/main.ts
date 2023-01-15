@@ -7,8 +7,8 @@ const microserviceOptions = {
   name: 'GREETING_SERVICE',
   transport: Transport.REDIS,
   options: {
-    host: 'www.devkids.co.kr',
-    port: 14408,
+    host: '127.0.0.1',
+    port: 6379,
     auth_pass: 'devnewmingcache',
   },
 };
