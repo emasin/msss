@@ -1,12 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Logger } from "@nestjs/common";
 import { AppService } from './app.service';
-
+import { MessagePattern } from '@nestjs/microservices';
+const logger = new Logger('AppController');
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @MessagePattern({ cmd: 'getMagazines' })
+  getHello() {
+    logger.log('getHello');
   }
 }
